@@ -8,6 +8,7 @@ cal = Calendar()
 
 USERNAME = ""
 PASSWORD = ""
+LOCATION = "4101 Legendary Dr, Destin FL 32541, United States"
 URL = "https://wfm.belk.com/RWSBELK/LoginSubmit.jsp"
 
 def debug(msg):
@@ -64,7 +65,6 @@ def make_events(days, combo):
         info = day.get_text().strip().split('\n')
         date = "%s %s, %s" % (combo[0], info[0], combo[1])
         shift = info[1]
-        location = "Belk Destin - %s" % info[2]
         if len(days) is 4:
             note = info[3]
 
@@ -75,7 +75,7 @@ def make_events(days, combo):
 
         event = Event()
         event['summary'] = "Belk"
-        event['location'] = location
+        event['location'] = LOCATION
         if len(days) is 4:
             event['description'] = note
         event['dtstart'] = start
