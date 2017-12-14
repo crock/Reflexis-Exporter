@@ -6,8 +6,8 @@ from icalendar import Calendar, Event
 
 cal = Calendar()
 
-USERNAME = ""
-PASSWORD = ""
+USERNAME = "456529"
+PASSWORD = "sammy30"
 LOCATION = "4101 Legendary Dr, Destin FL 32541, United States"
 URL = "https://wfm.belk.com/RWSBELK/LoginSubmit.jsp"
 
@@ -115,13 +115,11 @@ def main():
 			days = get_days(soup)
 			make_events(days, monthyear)
 			
-            print("Writing calendar event file...\n")
+			print("Writing calendar event file...\n")
 			f = open('work_calendar.ics', 'wb')
 			f.write(cal.to_ical())
 			f.close()
-            
-            print("Done.\n")
-            
+			print("Done.\n")
 			
 			
 			
