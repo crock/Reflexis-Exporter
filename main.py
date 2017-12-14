@@ -6,8 +6,8 @@ from icalendar import Calendar, Event
 
 cal = Calendar()
 
-USERNAME = "456529"
-PASSWORD = "sammy30"
+USERNAME = ""
+PASSWORD = ""
 LOCATION = "4101 Legendary Dr, Destin FL 32541, United States"
 URL = "https://wfm.belk.com/RWSBELK/LoginSubmit.jsp"
 
